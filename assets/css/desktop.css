@@ -1,0 +1,6 @@
+.grid-products {
+  grid-template-columns: repeat(auto-fit, 360px)!important ;
+}
+.search {
+  width: 50%;
+}
