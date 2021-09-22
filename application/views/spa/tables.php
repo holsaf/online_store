@@ -82,9 +82,11 @@
               </div>
               
               <div class="dropdown-divider"></div>
-              <button class="btn btn-info btn-block" @click="">Go to Cart</button>
+              <button class="btn btn-info btn-lg active" @click="">Go to Cart</button>
+              <!--<router-link to="/comprar" class="btn btn-info btn-lg active">Go to Cart</router-link>-->
               <button class="btn btn-danger btn-block" @click="">Clean Cart</button>
             </div>
+            
             </div>
             <!--/Cart Button -->
             <!-- Navbar-->
@@ -166,7 +168,7 @@
 
                         </div>
 
-
+                   
                     </main>
                     <footer class="py-4 bg-light mt-auto">
                         <div class="container-fluid px-4">
@@ -187,7 +189,7 @@
         </div>
       
         <script src="<?php echo base_url() ?>assets/js/vue/app.js"></script>
-        
+        <script src="<?php echo base_url() ?>assets/js/vue/component/comprar.js"></script>
         <script src="<?php echo base_url() ?>assets/js//bootstrap.bundle.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/scripts.js"></script>
         <script src="<?php echo base_url() ?>assets/js/simple-datatables@latest.js"></script>

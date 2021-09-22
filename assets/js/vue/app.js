@@ -1,39 +1,25 @@
-/*const home ={
-    template: '#homepage'
-}
-
-const about={
-    template: '#about'
-}*/
-
-//const router = new VueRouter({
-  //  base: 'blogigniter/adminVue',
-   // routes: [{path:'/', component: Prueba}],
-  //  linkActiveClass: 'active',
-  //  linkExactActiveClass: 'current'
-//});
 
 const app = new Vue({
    
     el:"#app",
     data:{ totalcompra: 0  , cantidadCar: 0, productos:[], car:[]},
     created() {
-        this.mostrarProductos()
-        console.log(this.productos)
+        this.mostrarProductos();
+       // console.log(this.productos)
         
     },
     methods: {
         mostrarProductos() {
-            fetch('http://localhost/blogigniter/Product/recuperarProductos')
+            fetch('http://localhost/onlinestore/Product/recuperarProductos')
                     .then(response => response.json())
-                    .then(res => (this.productos = res))
+                    .then(res => (this.productos = res));
             
         },
         
         addCart(product){
-            const checkInCar = this.car.filter((item)=> item.UPC == product.UPC)[0];
-            console.log(product);
-            if (checkInCar!= undefined)
+            const checkInCar = this.car.filter((item)=> item.UPC === product.UPC)[0];
+            console.log(checkInCar);
+            if (checkInCar!== undefined)
             {
                 checkInCar.amount++;
                 this.cantidadCar++;
@@ -59,18 +45,21 @@ const app = new Vue({
         },
         
         removeProducto(product){
-            const checkInCar = this.car.filter((item)=> item.UPC == product.UPC)
             if(product.amount>1)
             {
+                const checkInCar = this.car.filter( (item) => item.UPC === product.UPC)[0];
+                console.log(checkInCar);
                 checkInCar.amount--;
                 this.cantidadCar--;
                 this.totalcompra -= parseInt(product.product_price);
+                
             }
-            else(product.amount==1) 
+            else 
             {
                 this.car.splice(this.car.indexOf(product.UPC),1);
                 this.cantidadCar--;
                 this.totalcompra -= parseInt(product.product_price);
+                
             } 
         }
     }
