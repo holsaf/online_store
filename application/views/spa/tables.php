@@ -134,6 +134,20 @@
                             </a>
    
                         </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                JUEGOS
+                            </a>
+   
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                INFORMATICA
+                            </a>
+   
+                        </div>
                     </div>
                 </nav>
             </div>            
