@@ -1,7 +1,7 @@
 <?php
 
 
-        class Customer extends CI_Controller {
+        class Customer extends MY_Controller {
             
            
 
@@ -9,7 +9,8 @@
              {
                 parent::__construct();
                 $this->load->model("CustomerModel");
-                $this->load->helper(array('form','url')); 
+                $this->load->helper(array('form','url'));
+                 $this->init_seccion_auto(9); 
             }
             
             public function index()

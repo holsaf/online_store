@@ -51,7 +51,7 @@
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <!-- Cart Button -->
-            <div class="dropdown">
+            <div class="dropdown" align="right">
             <button
               class="btn btn-info btn-block dropdown-toggle d-flex justify-content-end align-items-baseline"
               data-toggle="dropdown"
@@ -103,45 +103,43 @@
             </ul>
         </nav>
         <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
+        <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+                            <a class="nav-link" href="#">
                                 <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
-                                PRODUCTOS
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                LAPTOP
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<?php echo base_url()?>/Product">Productos</a>
-                                      
-                                </nav>
-                            </div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-user-friends"></i></div>
-                                CLIENTES
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+   
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                SMARTPHONE
                             </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="<?php echo base_url()?>/Customer">Clientes</a>
-                              
-                                </nav>
-                            </div>
-                            
+   
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                TV
+                            </a>
+   
+                        </div>
+                        <div class="nav">
+                            <a class="nav-link" href="#">
+                                <div class="sb-nav-link-icon"><i class="fab fa-shopify"></i></div>
+                                SONIDO
+                            </a>
+   
                         </div>
                     </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        DEVELOPER
-                    </div>
                 </nav>
-            </div>
-            
+            </div>            
             <div id="layoutSidenav_content" >
-                    <main>
-                        <div class="grid-products">                       
+                    <main >
+                        <div   class="grid-products">                       
                             <div  class="card" v-for="product in productos">
                                 
                                 <img :src="'data:image/jpge;base64,'+ product.product_image" class="card-img-top"
@@ -162,8 +160,9 @@
                                         Out Stock
                                     </button>
                                    
-                                </div>
+                                    </div>
                             </div>
+                            
 
 
                         </div>
@@ -185,11 +184,11 @@
                     </footer>
                 
             </div>     
-         </div>
+        </div>
         </div>
       
         <script src="<?php echo base_url() ?>assets/js/vue/app.js"></script>
-        <script src="<?php echo base_url() ?>assets/js/vue/component/comprar.js"></script>
+
         <script src="<?php echo base_url() ?>assets/js//bootstrap.bundle.min.js"></script>
         <script src="<?php echo base_url() ?>assets/js/scripts.js"></script>
         <script src="<?php echo base_url() ?>assets/js/simple-datatables@latest.js"></script>

@@ -1,6 +1,6 @@
 <?php
 
-class Product extends CI_Controller {
+class Product extends MY_Controller {
     private $request;
     
     public function __construct()
@@ -8,7 +8,8 @@ class Product extends CI_Controller {
                 parent::__construct();
                 $this->load->model("ProductModel");
                 $this->load->helper(array('form','url')); 
-                $this->request = json_decode(file_get_contents('php://input'));
+                //$this->request = json_decode(file_get_contents('php://input'));
+                $this->init_seccion_auto(9);
             }
             
     

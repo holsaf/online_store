@@ -10,7 +10,7 @@ const app = new Vue({
     },
     methods: {
         mostrarProductos() {
-            fetch('http://localhost/onlinestore/Product/recuperarProductos')
+            fetch('http://localhost/onlinestore/MostrarProducto/pedido')
                     .then(response => response.json())
                     .then(res => (this.productos = res));
             

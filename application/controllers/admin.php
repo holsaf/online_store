@@ -1,10 +1,11 @@
 <?php
 
-class admin extends CI_Controller{
+class admin extends MY_Controller{
     
     public function __construct(){
         parent::__construct();
         $this->load->helper(array('form','url')); 
+        $this->init_seccion_auto(9);
     }
        
     public function index(){

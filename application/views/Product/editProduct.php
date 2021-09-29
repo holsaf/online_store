@@ -7,7 +7,7 @@
 
                         <form enctype="multipart/form-data" id="product" name="product" method="post" 
                         action="<?php echo base_url(); ?>index.php/Product/actualizar" 
-                        class="needs-validation" novalidate>
+                        class="needs-validation" validate>
                             
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">

@@ -14,7 +14,7 @@
         
         <script src="<?php echo base_url() ?>assets/js/vue/vue.js"></script>
         <script src="<?php echo base_url() ?>assets/js/vue/vue-router.js"></script>
-        
+        <script src="<?php echo base_url() ?>assets/js/jquery-3.6.0.min.js"></script>
         
     </head>
     <body class="sb-nav-fixed">
@@ -27,13 +27,15 @@
             
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto me-0 me-md-3 my-2 my-md-0">
+            
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" 
+                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><a class="dropdown-item" href="#!">Configuracion</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                        <li><a class="dropdown-item" href="<?php echo base_url()?>/Login/logout">Cerrar Sesion</a></li>
                     </ul>
                 </li>
             </ul>
@@ -70,7 +72,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        DEVELOPER
+                        <?php echo $this->session->userdata('name')?>
                     </div>
                 </nav>
             </div>

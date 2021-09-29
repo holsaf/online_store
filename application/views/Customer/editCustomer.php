@@ -7,18 +7,18 @@
 
                         <form id="customer" name="customer" method="post" 
                         action="<?php echo base_url(); ?>index.php/Customer/actualizar" 
-                        class="needs-validation" novalidate>
+                        class="needs-validation" validate>
                             
                             <div class="form-row">
                                 <div class="col-md-4 mb-3">
                                     <label for="validationCustom01">Tipo de Documento</label>
                                     <input type="text" class="form-control" name="document_type" 
-                                    value=<?php echo $customer->document_type ?> required>
+                                    value=<?php echo $customer->document_type ?> required >
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="validationCustom01">Numero de Documento</label>
                                     <input type="text" class="form-control" name="document_num" 
-                                    value=<?php echo $customer->document_num ?> required>
+                                    value=<?php echo $customer->document_num ?> required readonly>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="validationCustom01">Nombre del Cliente</label>
