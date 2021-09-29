@@ -51,7 +51,7 @@
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <!-- Cart Button -->
-            <div class="dropdown" align="right">
+            <div class="dropdown" align="right" v-if="cantidadCar>0">
             <button
               class="btn btn-info btn-block dropdown-toggle d-flex justify-content-end align-items-baseline"
               data-toggle="dropdown"
